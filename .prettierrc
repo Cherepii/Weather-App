@@ -1,0 +1,19 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"trailingComma": "es5",
+	"singleQuote": true,
+	"semi": true,
+	"disableLanguages": [],
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^./src/components/(.*)$",
+		"^./src/api/(.*)$",
+		"^./src/store/(.*)$",
+		"^../(.*)",
+		"^./(.*)",
+		"(.scss)$"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}
