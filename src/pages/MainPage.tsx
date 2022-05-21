@@ -1,14 +1,12 @@
 import { useState } from 'react';
 
 import AddCityWrapper from '../components/addCityWrapper/AddCityWrapper';
-import Input from '../components/input/Input';
 import Layout from '../components/layout/Layout';
 import WeatherList from '../components/weatherList/WeatherList';
 import { defaultCities } from '../components/weatherList/cities.data';
 
 const MainPage = () => {
-	const getCities = JSON.parse(localStorage.getItem('cities') || '');
-	const [cities, setCities] = useState(getCities);
+	const [cities, setCities] = useState<Array<string>>([]);
 	const [value, setValue] = useState('');
 
 	const removeCity = (idx: number) => {
@@ -23,11 +21,11 @@ const MainPage = () => {
 	};
 
 	const addCityToList = (newValue: string) => {
-		const updatedList = [...cities, newValue]
-		setCities(updatedList)
-		localStorage.setItem('cities', JSON.stringify(updatedList))
-		setValue('')
-	}
+		const updatedList = [...cities, newValue];
+		setCities(updatedList);
+		localStorage.setItem('cities', JSON.stringify(updatedList));
+		setValue('');
+	};
 
 	return (
 		<Layout title="Простое приложение, которое покажет текущую погоду для вас!">
