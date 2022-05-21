@@ -7,8 +7,8 @@ const App = () => {
 	return (
 		<Router>
 			<Routes>
-				<Route path="Weather-App/" element={<MainPage />} />
-				<Route path="Weather-App/weather" element={<WeatherPage />} />
+				<Route  path="/" element={<MainPage />} />
+				<Route path="/weather" element={<WeatherPage />} />
 			</Routes>
 		</Router>
 	);
