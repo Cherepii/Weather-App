@@ -7,7 +7,7 @@ const appId = '1883ddb94da1e726fae8fcc262190207';
 export const weatherAPI = createApi({
 	reducerPath: 'fetch weather',
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'http://api.openweathermap.org',
+		baseUrl: 'https://api.openweathermap.org',
 	}),
 	endpoints: (build) => ({
 		fetchWeather: build.query<IWeather, string>({

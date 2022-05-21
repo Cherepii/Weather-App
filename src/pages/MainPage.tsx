@@ -6,7 +6,14 @@ import WeatherList from '../components/weatherList/WeatherList';
 import { defaultCities } from '../components/weatherList/cities.data';
 
 const MainPage = () => {
-	const [cities, setCities] = useState<Array<string>>([]);
+	const getCities = () => {
+		if(localStorage.getItem('cities')){
+			return JSON.parse(localStorage.getItem('cities') || '')
+		}
+
+		return []
+	};
+	const [cities, setCities] = useState(getCities());
 	const [value, setValue] = useState('');
 
 	const removeCity = (idx: number) => {
@@ -21,11 +28,11 @@ const MainPage = () => {
 	};
 
 	const addCityToList = (newValue: string) => {
-		const updatedList = [...cities, newValue];
-		setCities(updatedList);
-		localStorage.setItem('cities', JSON.stringify(updatedList));
-		setValue('');
-	};
+		const updatedList = [...cities, newValue]
+		setCities(updatedList)
+		localStorage.setItem('cities', JSON.stringify(updatedList))
+		setValue('')
+	}
 
 	return (
 		<Layout title="Простое приложение, которое покажет текущую погоду для вас!">
