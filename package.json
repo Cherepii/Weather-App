@@ -5,7 +5,7 @@
 		"email": "mcherepivskiy04@gmail.com"
 	},
 	"version": "0.1.0",
-	"homepage": "https://Cherepii.github.io/Weather-App",
+	"homepage": "https://cherepii.github.io/Weather-App/",
 	"private": true,
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.1",
