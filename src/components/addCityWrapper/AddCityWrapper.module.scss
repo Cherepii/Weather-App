@@ -1,0 +1,7 @@
+.wrapper {
+  @apply flex items-center mt-4;
+
+  .desc {
+    @apply text-xl text-gray-200 mr-2;
+  }
+}

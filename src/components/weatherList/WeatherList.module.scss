@@ -1,0 +1,13 @@
+.weather {
+  @apply grid grid-cols-3 grid-rows-none w-full;
+  
+  margin-top: 22px;
+
+  .defaultButton {
+    @apply cursor-pointer text-2xl mx-auto block text-green-400;
+  }
+}
+
+.isAlone {
+  @apply grid-cols-1;
+}

@@ -1,0 +1,4 @@
+.input {
+  @apply p-2 w-full text-slate-500 rounded-xl outline-none text-lg focus:shadow-md focus:shadow-slate-300 transition-shadow delay-75;
+  max-width: 250px;
+}

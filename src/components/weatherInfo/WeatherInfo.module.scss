@@ -1,0 +1,16 @@
+.weather {
+  > h1 {
+    @apply text-center text-3xl text-yellow-300 mt-3 ;
+
+    > span {
+      @apply text-2xl text-slate-400 ml-2;
+    }
+  }
+
+  > div {
+    @apply mt-4;
+    > h4 {
+      @apply text-2xl;
+    }
+  }
+}
