@@ -70,7 +70,7 @@ const SingleWeather: FC<IProps> = ({ city, idx, removeCity }) => {
 					<h1
 						onClick={() =>
 							navigate(
-								`/weather?q=${weather.name}`
+								`Weather-App/weather?q=${weather.name}`
 							)
 						}
 					>
