@@ -1,3 +1,3 @@
 export const defaultCities = [
-  "Moscow", "Kiev", "Nursultan", "Odessa", "London", "Almaty"
+  "Moscow", "Kiev", "Nur-Sultan", "Odessa", "London", "Almaty"
 ]
