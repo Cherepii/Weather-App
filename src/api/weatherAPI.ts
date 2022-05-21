@@ -18,6 +18,6 @@ export const weatherAPI = createApi({
 					appid,
 				},
 			}),
-		}),
+		})
 	}),
 });

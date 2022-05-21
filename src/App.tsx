@@ -5,9 +5,9 @@ import WeatherPage from './pages/WeatherPage';
 
 const App = () => {
 	return (
-		<Router>
+		<Router basename='Weather-App'>
 			<Routes>
-				<Route  path="/" element={<MainPage />} />
+				<Route path="/" element={<MainPage />} />
 				<Route path="/weather" element={<WeatherPage />} />
 			</Routes>
 		</Router>

@@ -34,6 +34,8 @@ const SingleWeather: FC<IProps> = ({ city, idx, removeCity }) => {
 		refetch,
 	} = weatherAPI.useFetchWeatherQuery(city);
 
+	const getWeatherIcon = `http://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`;
+
 	const convertUnixToDate = moment
 		.unix(weather ? weather.dt : 111)
 		.format('Do MMMM YYYY');
@@ -49,7 +51,11 @@ const SingleWeather: FC<IProps> = ({ city, idx, removeCity }) => {
 			<div className={styles.weather}>
 				<span>Данные о погоде не найдены...</span>
 				<div className={styles.buttonBlock}>
-					<Button text='Удалить' handleClick={() => removeCity(idx)} extraClass='mx-auto bg-red-400'/>
+					<Button
+						text="Удалить"
+						handleClick={() => removeCity(idx)}
+						extraClass="mx-auto bg-red-400"
+					/>
 				</div>
 			</div>
 		);
@@ -67,16 +73,11 @@ const SingleWeather: FC<IProps> = ({ city, idx, removeCity }) => {
 		>
 			<div className={styles.content}>
 				<div className={styles.generals}>
-					<h1
-						onClick={() =>
-							navigate(
-								`weather?q=${weather.name}`
-							)
-						}
-					>
+					<h1 onClick={() => navigate(`weather?q=${weather.name}`)}>
 						{weather.name}
 					</h1>
 					<span>{weather.weather[0].description}</span>
+					<img className='ml-auto' src={getWeatherIcon} alt="icon" height={56} width={60} />
 				</div>
 				<div className={styles.main}>
 					<h4>{convertUnixToDate}</h4>
