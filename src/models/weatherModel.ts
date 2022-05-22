@@ -37,6 +37,18 @@ export interface IRain {
 	'3h': number;
 }
 
+export interface IHourly {
+	// only needed fields
+	temp: number
+	dt: number
+}
+
+export interface IHourlyWeather {
+	lat: number
+	lon: number
+	hourly: IHourly[]
+}
+
 export interface IWeather {
 	coord: ICoord;
 	weather: ISingleWeather[];

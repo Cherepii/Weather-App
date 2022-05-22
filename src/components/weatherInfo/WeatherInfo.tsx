@@ -2,6 +2,7 @@ import moment from 'moment';
 import { FC } from 'react';
 
 import { IWeather } from '../../models/weatherModel';
+import HourlyWeather from '../hourlyWeather/HourlyWeather';
 import SingleWeatherInfo from '../singleWeather/SingleWeatherInfo';
 
 import styles from './WeatherInfo.module.scss';
@@ -49,17 +50,22 @@ const WeatherInfo: FC<{ weather: IWeather }> = ({ weather }) => {
 			<h1>
 				{convertUnixToDate()} <span>({weather.weather[0].description})</span>
 			</h1>
-			{dataWeather.map((el: IField, idx) => {
-				return (
-					<div key={idx}>
-						<SingleWeatherInfo
-							value={setValue(el)}
-							desc={el.desc}
-							extraDesc={el.extraDesc}
-						/>
-					</div>
-				);
-			})}
+			<div className={styles.commonBlock}>
+				<div>
+					{dataWeather.map((el: IField, idx) => (
+						<div key={idx}>
+							<SingleWeatherInfo
+								value={setValue(el)}
+								desc={el.desc}
+								extraDesc={el.extraDesc}
+							/>
+						</div>
+					))}
+				</div>
+				<div>
+					<HourlyWeather weather={weather}/>
+				</div>
+			</div>
 		</div>
 	);
 };

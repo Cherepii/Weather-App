@@ -1,0 +1,33 @@
+.hourlyBlock {
+	@apply flex items-center h-36 border-x-2 border-x-slate-500;
+
+	.hourlyItem {
+		@apply w-14 mt-auto;
+
+		> div {
+			@apply px-1  text-center;
+		}
+
+		> div:first-child {
+			@apply text-slate-700 border-slate-600;
+
+			border-width: 1px;
+		}
+
+		> div:last-child {
+			@apply mt-auto text-slate-100 pt-8;
+		}
+	}
+}
+
+.light {
+	@apply bg-orange-200;
+}
+
+.middle {
+	@apply bg-amber-200;
+}
+
+.hot {
+	@apply bg-red-200;
+}

@@ -7,10 +7,18 @@
     }
   }
 
-  > div {
-    @apply mt-4;
-    > h4 {
-      @apply text-2xl;
+  .commonBlock {
+    @apply flex-center-between mt-3;
+
+    & > div:first-child {
+      > div {
+        @apply mt-4;
+        > h4 {
+          @apply text-2xl;
+        }
+      }
     }
   }
+
+  
 }
