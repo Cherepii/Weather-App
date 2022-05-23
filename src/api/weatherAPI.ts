@@ -16,6 +16,7 @@ export const weatherAPI = createApi({
 				params: {
 					q,
 					appid,
+					lang: 'ru'
 				},
 			}),
 		}),
